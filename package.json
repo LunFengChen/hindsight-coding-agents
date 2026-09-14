@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/LunFengChen/hindsight-coding-agents.git"
   },
-  "description": "Reflect-only Hindsight long-term memory for coding agents (harness-pluggable: opencode, …), with automatic background ingestion (no setup CLI).",
+  "description": "Reflect-only Hindsight long-term memory for coding agents (harness-pluggable: opencode, \u2026), with automatic background ingestion (no setup CLI).",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -56,9 +56,9 @@
   "dsh": {
     "plugin": {
       "title": "Hindsight memory",
-      "titleZh": "Hindsight 记忆",
+      "titleZh": "Hindsight \u8bb0\u5fc6",
       "description": "Long-term project memory. Defaults to a local daemon; data lives in ~/.hindsight. Cloud is optional.",
-      "descriptionZh": "长期项目记忆。默认使用本机守护进程，数据保存在 ~/.hindsight。云端可选。"
+      "descriptionZh": "\u957f\u671f\u9879\u76ee\u8bb0\u5fc6\u3002\u9ed8\u8ba4\u4f7f\u7528\u672c\u673a\u5b88\u62a4\u8fdb\u7a0b\uff0c\u6570\u636e\u4fdd\u5b58\u5728 ~/.hindsight\u3002\u4e91\u7aef\u53ef\u9009\u3002"
     },
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -112,5 +112,9 @@
   "homepage": "https://github.com/LunFengChen/hindsight-coding-agents",
   "bugs": {
     "url": "https://github.com/LunFengChen/hindsight-coding-agents/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
