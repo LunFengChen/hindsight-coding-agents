@@ -33040,7 +33040,7 @@ function resolveHarness(env = process.env) {
   const harness = env.HINDSIGHT_MCP_HARNESS;
   if (!harness) {
     throw new Error(
-      "HINDSIGHT_MCP_HARNESS is not set. Every coding agent launches this same mcp-server.js, so only that variable identifies the caller \u2014 it decides the harness:<id> stamp on everything ingested and which bank this session resolves. Re-run `npx @vectorize-io/hindsight-coding-agents install <harness>` to repair a registration written before the installer set it."
+      "HINDSIGHT_MCP_HARNESS is not set. Every coding agent launches this same mcp-server.js, so only that variable identifies the caller \u2014 it decides the harness:<id> stamp on everything ingested and which bank this session resolves. Re-run `npx @x1a0f3n9/hindsight-coding-agents install <harness>` to repair a registration written before the installer set it."
     );
   }
   return harness;

@@ -2026,7 +2026,7 @@ import {
 import { homedir as homedir4, tmpdir as tmpdir3 } from "os";
 import { dirname as dirname8, join as join10 } from "path";
 import { fileURLToPath as fileURLToPath4 } from "url";
-var PACKAGE_NAME = "@vectorize-io/hindsight-coding-agents";
+var PACKAGE_NAME = "@x1a0f3n9/hindsight-coding-agents";
 var CHECK_INTERVAL_MS = 24 * 60 * 60 * 1e3;
 var FETCH_TIMEOUT_MS = 5e3;
 function stateFile(runtimeDir) {

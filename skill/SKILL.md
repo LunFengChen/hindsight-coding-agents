@@ -65,14 +65,14 @@ an outdated decision — silent disregard leaves the trap armed for the next ses
 ## Install / update
 
 ```bash
-npx @vectorize-io/hindsight-coding-agents install all          # every detected agent, wired natively
-npx @vectorize-io/hindsight-coding-agents install claude-code  # or just one
-npx @vectorize-io/hindsight-coding-agents uninstall all        # removes exactly what install added
-npx @vectorize-io/hindsight-coding-agents update               # refresh the runtime only, no rewiring
+npx @x1a0f3n9/hindsight-coding-agents install all          # every detected agent, wired natively
+npx @x1a0f3n9/hindsight-coding-agents install claude-code  # or just one
+npx @x1a0f3n9/hindsight-coding-agents uninstall all        # removes exactly what install added
+npx @x1a0f3n9/hindsight-coding-agents update               # refresh the runtime only, no rewiring
 ```
 
 `install` takes an explicit target — `all`, or one or more harness names. A bare
-`npx @vectorize-io/hindsight-coding-agents install` changes nothing and prints the choice, so wiring every agent on
+`npx @x1a0f3n9/hindsight-coding-agents install` changes nothing and prints the choice, so wiring every agent on
 the machine is never something that happens by accident. **Updating is the same `install`
 command again** — it re-copies the runtime in place.
 

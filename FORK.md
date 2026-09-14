@@ -17,3 +17,7 @@ fatal: not a git repository (or any of the parent directories): .git
 ## Default
 
 This fork defaults `serverMode` to `daemon`. Memory lives in `~/.hindsight`. Cloud or a self-hosted URL remains optional in `~/.hindsight/coding-agent.json`.
+
+## Package name
+
+Published identity is `@x1a0f3n9/hindsight-coding-agents`. The dsh loader row is `@x1a0f3n9/hindsight-coding-agents/dsh`.

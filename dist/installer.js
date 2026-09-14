@@ -4158,7 +4158,7 @@ ${GROK_MARKER_END}
 };
 var CLINE_HOOK_MARKER = "HINDSIGHT_CODING_AGENTS_CLINE";
 var CLINE_OLD_HOOK_EVENTS = ["TaskStart", "UserPromptSubmit", "TaskComplete"];
-var CLINE_PLUGIN_NAME = "@vectorize-io/hindsight-coding-agents";
+var CLINE_PLUGIN_NAME = "@x1a0f3n9/hindsight-coding-agents";
 function removeLegacyClineHooks(c) {
   const hooksDir = join16(c.home, "Documents", "Cline", "Hooks");
   for (const event of CLINE_OLD_HOOK_EVENTS) {
