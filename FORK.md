@@ -14,6 +14,6 @@ This repository is the xfdsh preinstall source. It is not the upstream Vectorize
 fatal: not a git repository (or any of the parent directories): .git
 ```
 
-## Default in xfdsh
+## Default
 
-xfdsh still defaults Hindsight to a local daemon. Cloud remains optional in `~/.hindsight/coding-agent.json`.
+This fork defaults `serverMode` to `daemon`. Memory lives in `~/.hindsight`. Cloud or a self-hosted URL remains optional in `~/.hindsight/coding-agent.json`.

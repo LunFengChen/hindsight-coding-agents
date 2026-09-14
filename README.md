@@ -3,8 +3,9 @@
 This is LunFengChen's maintained fork of `@vectorize-io/hindsight-coding-agents` 0.5.2.
 
 - Repository: https://github.com/LunFengChen/hindsight-coding-agents
-- xfdsh pin: `github:LunFengChen/hindsight-coding-agents#v0.5.2-xfdsh.1`
+- xfdsh pin: `github:LunFengChen/hindsight-coding-agents#v0.5.2-xfdsh.2`
 - Change vs upstream 0.5.2: `git` child processes use `stdio: ["ignore", "pipe", "pipe"]`, so a session whose cwd is not a git repository does not print `fatal: not a git repository`.
+- Default `serverMode` is `daemon`. Memory lives in `~/.hindsight`. Cloud remains optional.
 
 The npm package name stays `@vectorize-io/hindsight-coding-agents` so the existing dsh loader row `@vectorize-io/hindsight-coding-agents/dsh` still resolves.
 
@@ -349,9 +350,9 @@ Three modes, chosen once when you install (`install` asks on a terminal; pass `-
 
 | mode          | what runs                                 | needs                                    |
 | ------------- | ----------------------------------------- | ---------------------------------------- |
-| `cloud`       | Hindsight Cloud (default)                 | an API token                             |
-| `self-hosted` | a Hindsight server you already run        | its URL                                  |
-| `daemon`      | a local `hindsight-embed` on this machine | `uv` on PATH + an LLM key for extraction |
+| `daemon`      | a local `hindsight-embed` on this machine (default) | `uv` on PATH + an LLM key for extraction; data in `~/.hindsight` |
+| `self-hosted` | a Hindsight server you already run                  | its URL                                                          |
+| `cloud`       | Hindsight Cloud                                     | an API token                                                     |
 
 ```bash
 npx @vectorize-io/hindsight-coding-agents install claude-code --server daemon
@@ -391,7 +392,7 @@ environment carries over unchanged:
 
 | field               | env                             | default        | meaning                                                    |
 | ------------------- | ------------------------------- | -------------- | ---------------------------------------------------------- |
-| `serverMode`        | `HINDSIGHT_SERVER_MODE`         | `cloud`        | `cloud` \| `self-hosted` \| `daemon`                       |
+| `serverMode`        | `HINDSIGHT_SERVER_MODE`         | `daemon`       | `cloud` \| `self-hosted` \| `daemon`                       |
 | `apiPort`           | `HINDSIGHT_API_PORT`            | `9077`         | port the local daemon listens on                           |
 | `daemonIdleTimeout` | `HINDSIGHT_DAEMON_IDLE_TIMEOUT` | —              | deprecated, ignored: the daemon no longer exits on its own |
 | `daemonProfile`     | `HINDSIGHT_DAEMON_PROFILE`      | `coding-agent` | which local database it uses                               |

@@ -3826,13 +3826,13 @@ function flagValueArgs(args, names) {
 }
 var CONFIG_RELATIVE = [".hindsight", "coding-agent.json"];
 var SERVER_CHOICES = [
-  { mode: "cloud", label: "Hindsight Cloud", hint: "hosted, needs an API token" },
-  { mode: "self-hosted", label: "Self-hosted server", hint: "a Hindsight server you already run" },
   {
     mode: "daemon",
     label: "Local daemon (on-device)",
     hint: "runs hindsight-embed here; no account, needs uv + an LLM key"
-  }
+  },
+  { mode: "self-hosted", label: "Self-hosted server", hint: "a Hindsight server you already run" },
+  { mode: "cloud", label: "Hindsight Cloud", hint: "hosted, needs an API token" }
 ];
 function promptServerMode(c) {
   if (c.selectPrompt) {
@@ -3854,7 +3854,7 @@ Where should memory live?
 `
   );
   const answer = readLineSync(c, "Choose [1-3] (default 1): ").trim();
-  if (answer === "") return "cloud";
+  if (answer === "") return "daemon";
   const digit = Number.parseInt(answer, 10);
   if (digit >= 1 && digit <= SERVER_CHOICES.length) return SERVER_CHOICES[digit - 1].mode;
   c.log?.(`unrecognised choice "${answer}" \u2014 leaving the server config unchanged`);

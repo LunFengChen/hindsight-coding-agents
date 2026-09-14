@@ -1162,7 +1162,7 @@ function resolveObservationScopes(raw) {
   return DEFAULT_OBSERVATION_SCOPES;
 }
 function resolveConfig(raw = {}) {
-  const serverMode = ["cloud", "self-hosted", "daemon"].includes(raw.serverMode) ? raw.serverMode : "cloud";
+  const serverMode = ["cloud", "self-hosted", "daemon"].includes(raw.serverMode) ? raw.serverMode : "daemon";
   const apiPort = raw.apiPort || DEFAULT_DAEMON_PORT;
   return {
     serverMode,
