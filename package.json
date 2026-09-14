@@ -1,11 +1,11 @@
 {
   "name": "@vectorize-io/hindsight-coding-agents",
-  "version": "0.5.2-xfdsh.2",
+  "version": "0.5.2-xfdsh.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LunFengChen/hindsight-coding-agents.git"
   },
-  "description": "Reflect-only Hindsight long-term memory for coding agents (harness-pluggable: opencode, \u2026), with automatic background ingestion (no setup CLI).",
+  "description": "Reflect-only Hindsight long-term memory for coding agents (harness-pluggable: opencode, …), with automatic background ingestion (no setup CLI).",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -54,6 +54,12 @@
     "hooks"
   ],
   "dsh": {
+    "plugin": {
+      "title": "Hindsight memory",
+      "titleZh": "Hindsight 记忆",
+      "description": "Long-term project memory. Defaults to a local daemon; data lives in ~/.hindsight. Cloud is optional.",
+      "descriptionZh": "长期项目记忆。默认使用本机守护进程，数据保存在 ~/.hindsight。云端可选。"
+    },
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
